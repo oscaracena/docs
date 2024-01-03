@@ -122,7 +122,7 @@ Save the file (press `Ctrl + X`, then `Y`, then `Enter`), and restart the Zynthi
 systemctl restart zynthian
 ```
 
-Press the mute button to check if the touch screen is working. Or press in the upper left corner to open the main menu. If it works, **give yourself a pat on the back!** ;) 
+Press the mute button to check if the touch screen is working. Or press in the upper left corner to open the main menu. If it works, **give yourself a pat on the back!** ;)
 
 Next step? The sound system.
 
@@ -194,6 +194,11 @@ scripts/reTerminal.sh
 Now, you can reboot as instructed. Once the system is up again, go to the web interface and bind these keys to something useful for you. In my case, F1 is 'Back', F2 is 'Up', F3 is 'Down', green button is 'Enter' and the upper side button is 'Power Off'. The mapping is something like this:
 
 ![Alt text](key-mappings.png)
+
+
+# Troubleshooting
+
+* When using an external USB sound card, you may find that jack does not work properly: the command `jack_wait -c` does not return `running`, and the Zynthian UI shows an error message. Sometimes, this may be fixed disabling the sound card input port. Open the webconf tool, and go to `Hardware > Audio`. There, in the *Jackd Options* field, add `-P` after `-d alsa`. Reboot to test if it worked.
 
 
 # References
