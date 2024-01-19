@@ -1,0 +1,62 @@
+==Akai APC Key25 MK2==
+
+[[File:akai_apc_key25_mk2.png|800px|right]]
+
+This device supports two operation modes:
+
+# The default mode (called '''"Mixpad"''' in this section), which controls the ZynMixer and the ZynPad.
+# The '''"Device"''' mode, which handles the Zynthian UI.
+
+====The Mixpad mode====
+
+This is the default mode, selected automatically on start. You can also change to it pressing <code>SHIFT</code> + <code>VOLUME</code> or <code>SHIFT</code> + <code>PAN</code>. In this mode you can perform the following actions:
+
+* Change controller's bank. There are '''two banks''' (1 and 2), which are used to handle up to 16 chains (with the eight track buttons/knobs). Bank 1 is for chains 1 to 8 and bank 2 manage chains 9 to 16. To show current selected bank, press and hold <code>SHIFT</code>. One of the track buttons <code>LEFT arrow</code> or <code>RIGHT arrow</code> will light up in red, <code>LEFT arrow</code> is bank 1 and <code>RIGHT arrow</code> is bank 2. You can press one of these buttons while holding <code>SHIFT</code> to change the bank.
+
+* Use track buttons to '''perform a function''' on chains. The function is chosen by pressing <code>SHIFT</code> + one of <code>SELECT</code>, <code>MUTE</code> or <code>SOLO</code> soft key buttons. Press and hold <code>SHIFT</code> to see current selected function on soft key buttons (in green). Functions are:
+** <code>SELECT</code>, used to change the selected chain. The key bed (black and white keys) will play on that chain.
+** <code>MUTE</code>, used to mute the corresponding chain.
+** <code>SOLO</code>, used to enable solo in the corresponding chain.
+
+* '''Change current scene''' using the track buttons. You need first to select that function by pressing <code>SHIFT</code> + <code>REC ARM</code> button. This function is affected by bank selection, so you can change up to 16 scenes. When selecting a new scene, the ZynPad will be shown.
+
+* Start/stop '''sequences of a row''', pressing the corresponding SOFT KEY (without modifiers). If there are any sequence playing, they will stop. If there are no sequences playing, it will start those not empty. The action to be run is shown by the LED status (lit will stop, off will start).
+
+* Use knobs to modify '''chains' volume or balance'''. The value modified is given by current KNOB CTRL selected: <code>VOLUME</code> or <code>PAN</code> (for balance). To change the function, press <code>SHIFT</code> + <code>VOLUME</code> or <code>SHIFT</code> + <code>PAN</code>. The knobs are also affected by current controller's bank.
+
+* Use <code>SHIFT</code> + <code>KNOB k1</code> to change volume or balance for main chain (what changes is selected by the current KNOB CTRL function).
+
+* Press <code>SHIFT</code> + <code>STOP ALL CLIPS</code> to perform the selected track's function (MUTE or SOLO) on main chain.
+
+* '''Toggle audio playback''' with <code>PLAY/PAUSE</code> button. If Zynthian's ALT mode is active, it will '''toggle MIDI playback'''.
+
+* '''Toggle audio record''' with <code>SHIFT</code> + <code>RECORD</code> button. If Zynthian's ALT mode is active, it will '''toggle MIDI recording'''.
+
+* Tap a pad to '''start/stop a sequence'''. The pad LED will show its status as follows (pad color will always match the sequence color):
+** Dim solid: Stopped sequence without content (no notes in patterns).
+** Bright solid: Stopped sequence with content.
+** Blinking slow: Playing sequence.
+** Blinking fast: Recording sequence.
+** Pulsing: Syncing to play/stop.
+
+* '''Stop all sequences''' of current scene (but not audio/midi playback or recording), doing a ''short'' press on <code>STOP ALL CLIPS</code> button; ''bold'' press to stop all sequences on all scenes. If you want a 'panic' stop (which stops all sequences and also audio and midi playback), perform a ''long'' press.
+
+* Open the '''pattern editor''' for a given sequence, pressing <code>SHIFT</code> + a pad button.
+
+* Start '''recording a pattern'''. For this, press <code>RECORD</code> + a pad button, which will 1) select the chain associated with the group of the sequence, 2) open the pattern editor for that sequence, 3) start playing the sequence and 4) start recording that sequence. If you press the pad again (without holding any other button), the recording will stop. Press again to stop playback too. You can also control the playback/recording with <code>PLAY/PAUSE</code> and <code>SHIFT</code> + <code>RECORD</code> buttons.
+
+* If the pattern editor is open, press <code>SHIFT</code> + <code>UP arrow</code> to '''go back to ZynPad'''. Press it again to go to mixer screen.
+
+====The Device mode====
+
+[[File:Akai-apc-key-25-mk2-ui-legend.png|800px|right]]
+
+This mode allows you to '''control the Zynthian UI'''. You can enable it by pressing <code>SHIFT</code> + <code>DEVICE</code>. If this mode is active, the button <code>DEVICE</code> will blink in red.
+
+As you can see in the image, this mode mimics the Zynthian V5 hardware interface. The upper four buttons are <code>OPT/ADMIN</code>, <code>MIX/LEVEL</code>, <code>CTRL/PRESET</code> and <code>ZS3/SHOT</code>. Next row is <code>ALT</code>, <code>METRONOME</code> and <code>PAD/STEP</code>. The four buttons at the right side (in white) are <code>F1</code> to <code>F4</code>. In this mode, transport is handled by <code>PLAY/PAUSE</code> and <code>RECORD</code> buttons, and the transport pads are only to show playback/recording status. Navigation buttons are <code>UP</code>, <code>DOWN</code>, <code>LEFT</code>, <code>RIGHT</code>, (in yellow) <code>BACK/NO</code> (in red) and <code>SEL/YES</code> (in green). For the directional keys, you can also use the track keys labelled as such.
+
+The behaviour and status are '''similar of those in the hardware interface''': there is support for short, bold and long press; screen access buttons are blue when no function is selected, green on it's primary and orange on its secondary function; ALT key changes to violet when active (and <code>F1</code>-<code>F4</code> also change).
+
+The nearest four knobs has the functions of '''Knob#1''' to '''Knob#4'''. They can be used to control volume of selected/main chain, move vertically/horizontally in pattern editor or Zynpad, move selected item in menus, etc. Press <code>SHIFT</code> with a knob for a coarse (faster) adjustment. The knob press is activated using the first four soft keys to the left (in green), and also has short/bold press support. The mapping is: '''Knob#1''' = (<code>K1</code>, <code>CLIP STOP</code>); '''Knob#2''' = (<code>K5</code>, <code>SOLO</code>); '''Knob#3''' = (<code>K2</code>, <code>MUTE</code>); '''Knob#1''' = (<code>K6</code>, <code>REC ARM</code>). This scheme is very comfortable in the V4 four-corners layout.
+
+<br clear=all>
